@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CleanWeb Customizer - Settings</title>
+    <link rel="stylesheet" href="popup.css" />
+    <style>
+      body {
+        width: 100%;
+        min-height: 100vh;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+
+      .options-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        border-bottom: 2px solid #4caf50;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+      }
+
+      .header h1 {
+        margin: 0 0 10px 0;
+        color: #333;
+        font-size: 28px;
+      }
+
+      .header p {
+        margin: 0;
+        color: #666;
+        font-size: 14px;
+      }
+
+      .stats-bar {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 6px;
+      }
+
+      .stat-item {
+        flex: 1;
+        text-align: center;
+      }
+
+      .stat-value {
+        display: block;
+        font-size: 32px;
+        font-weight: bold;
+        color: #4caf50;
+        margin-bottom: 5px;
+      }
+
+      .stat-label {
+        display: block;
+        font-size: 14px;
+        color: #666;
+      }
+
+      .domain-section {
+        margin-bottom: 30px;
+      }
+
+      .domain-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 20px;
+        margin-bottom: 15px;
+        background: white;
+      }
+
+      .domain-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .domain-name {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .domain-actions {
+        display: flex;
+        gap: 10px;
+      }
+
+      .rules-grid {
+        display: grid;
+        gap: 8px;
+      }
+
+      .rule-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background: #f9f9f9;
+        border-radius: 4px;
+        font-family: "Courier New", monospace;
+        font-size: 12px;
+      }
+
+      .rule-selector {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #555;
+      }
+
+      .btn-icon {
+        padding: 5px 10px;
+        font-size: 16px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #666;
+        transition: color 0.2s;
+      }
+
+      .btn-icon:hover {
+        color: #f44336;
+      }
+
+      .empty-state-large {
+        text-align: center;
+        padding: 60px 20px;
+        color: #999;
+      }
+
+      .empty-state-large svg {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+        opacity: 0.3;
+      }
+
+      .bulk-actions {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+
+      .export-import {
+        margin-top: 40px;
+        padding-top: 30px;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      .export-import h2 {
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      .export-import .btn-group {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="options-container">
+      <div class="header">
+        <h1>🧹 CleanWeb Customizer Settings</h1>
+        <p>Manage all your hidden elements across websites</p>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-value" id="totalDomains">0</span>
+          <span class="stat-label">Websites</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value" id="totalRules">0</span>
+          <span class="stat-label">Hidden Elements</span>
+        </div>
+      </div>
+
+      <div class="bulk-actions">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search domains or selectors..."
+          style="
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+          "
+        />
+        <button id="exportBtn" class="btn btn-secondary">Export Rules</button>
+        <button id="importBtn" class="btn btn-secondary">Import Rules</button>
+        <input
+          type="file"
+          id="importFile"
+          accept=".json"
+          style="display: none"
+        />
+        <button id="clearAllBtn" class="btn btn-danger">Clear All Rules</button>
+      </div>
+      <div class="domain-section">
+        <h2>Rules by Domain</h2>
+        <div id="domainsList">
+          <div class="empty-state-large">
+            <p>No rules configured yet</p>
+            <p style="font-size: 14px; margin-top: 10px">
+              Start using the extension on any website to create rules
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="options.js"></script>
+  </body>
+</html>

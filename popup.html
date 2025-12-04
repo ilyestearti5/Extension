@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CleanWeb Customizer</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-icon">
+          <span class="material-icons">cleaning_services</span>
+        </div>
+        <h1>CleanWeb Customizer</h1>
+        <p class="subtitle">Hide unwanted elements on any website</p>
+      </header>
+
+      <main>
+        <section class="action-section">
+          <button id="toggleSelectionBtn" class="btn btn-primary">
+            <span class="material-icons">ads_click</span>
+            <span id="btnText">Start Selection</span>
+          </button>
+          <p class="help-text">Click to start selecting elements to hide</p>
+          <p class="help-text-small">
+            <span class="material-icons">keyboard</span> Ctrl+Shift+H
+          </p>
+        </section>
+
+        <section class="info-section">
+          <div class="info-card">
+            <div class="info-item">
+              <span class="material-icons info-icon">language</span>
+              <div class="info-content">
+                <span class="label">Domain</span>
+                <span id="currentDomain" class="value">Loading...</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-item">
+              <span class="material-icons info-icon">visibility_off</span>
+              <div class="info-content">
+                <span class="label">Hidden</span>
+                <span id="hiddenCount" class="value">0</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-item">
+              <span class="material-icons info-icon">check_circle</span>
+              <div class="info-content">
+                <span class="label">Status</span>
+                <span id="statusIndicator" class="value status-active"
+                  >Active</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="quick-actions">
+          <button
+            id="undoBtn"
+            class="btn btn-action"
+            title="Undo last hidden element (Ctrl+Shift+U)"
+          >
+            <span class="material-icons">undo</span>
+            <span>Undo</span>
+          </button>
+          <button
+            id="showHiddenBtn"
+            class="btn btn-action"
+            title="Temporarily show all hidden elements"
+          >
+            <span class="material-icons">visibility</span>
+            <span>Show</span>
+          </button>
+          <button
+            id="toggleRulesBtn"
+            class="btn btn-action"
+            title="Toggle rules on/off (Ctrl+Shift+T)"
+          >
+            <span class="material-icons">toggle_off</span>
+            <span>Toggle</span>
+          </button>
+        </section>
+
+        <section class="tag-hiding-section">
+          <h3>
+            <span class="material-icons section-icon">label</span>
+            Quick Hide by Tag
+          </h3>
+          <div class="tag-buttons">
+            <button
+              id="hideVideosBtn"
+              class="btn btn-tag"
+              title="Hide all video elements (Ctrl+Shift+V)"
+            >
+              <span class="material-icons">videocam</span>
+              <span>Videos</span>
+            </button>
+            <button
+              id="hideAudiosBtn"
+              class="btn btn-tag"
+              title="Hide all audio elements (Ctrl+Shift+A)"
+            >
+              <span class="material-icons">volume_up</span>
+              <span>Audios</span>
+            </button>
+            <button
+              id="hideImagesBtn"
+              class="btn btn-tag"
+              title="Hide all img elements (Ctrl+Shift+I)"
+            >
+              <span class="material-icons">image</span>
+              <span>Images</span>
+            </button>
+            <button
+              id="hideIframesBtn"
+              class="btn btn-tag"
+              title="Hide all iframe elements"
+            >
+              <span class="material-icons">web_asset</span>
+              <span>Iframes</span>
+            </button>
+            <button
+              id="hideNavsBtn"
+              class="btn btn-tag"
+              title="Hide all nav elements"
+            >
+              <span class="material-icons">menu</span>
+              <span>Navs</span>
+            </button>
+            <button
+              id="hideButtonsBtn"
+              class="btn btn-tag"
+              title="Hide all button elements (Ctrl+Shift+B)"
+            >
+              <span class="material-icons">smart_button</span>
+              <span>Buttons</span>
+            </button>
+            <button
+              id="hideLinksBtn"
+              class="btn btn-tag"
+              title="Hide all anchor/link elements"
+            >
+              <span class="material-icons">link</span>
+              <span>Links</span>
+            </button>
+          </div>
+          <div class="custom-tag-input">
+            <span class="material-icons input-icon">code</span>
+            <input
+              type="text"
+              id="customTagInput"
+              placeholder="e.g., aside, footer, section"
+            />
+            <button id="hideCustomTagBtn" class="btn btn-custom-tag">
+              <span class="material-icons">add</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="rules-section">
+          <h3>
+            <span class="material-icons section-icon">rule</span>
+            Active Rules
+          </h3>
+          <div id="rulesList" class="rules-list">
+            <p class="empty-state">
+              <span class="material-icons">info</span>
+              No hidden elements yet
+            </p>
+          </div>
+        </section>
+
+        <section class="actions-footer">
+          <button id="clearDomainBtn" class="btn btn-footer btn-danger">
+            <span class="material-icons">delete_sweep</span>
+            <span>Clear Site</span>
+          </button>
+          <div class="footer-actions-right">
+            <button
+              id="exportBtn"
+              class="btn btn-footer"
+              title="Export all rules to file"
+            >
+              <span class="material-icons">file_download</span>
+            </button>
+            <button
+              id="importBtn"
+              class="btn btn-footer"
+              title="Import rules from file"
+            >
+              <span class="material-icons">file_upload</span>
+            </button>
+            <button
+              id="openOptionsBtn"
+              class="btn btn-footer"
+              title="Open options"
+            >
+              <span class="material-icons">settings</span>
+            </button>
+          </div>
+          <input
+            type="file"
+            id="importFile"
+            accept=".json"
+            style="display: none"
+          />
+        </section>
+      </main>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

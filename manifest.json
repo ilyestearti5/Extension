@@ -1,0 +1,90 @@
+{
+  "manifest_version": 3,
+  "name": "CleanWeb Customizer",
+  "version": "1.0.0",
+  "description": "Hide unwanted elements on websites and keep pages clean across visits",
+  "permissions": ["storage", "activeTab", "scripting", "contextMenus"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["storage.js", "templates.js", "contentScript.js"],
+      "css": ["overlay.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["selectionOverlay.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "commands": {
+    "toggle-selection": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+H",
+        "mac": "Command+Shift+H"
+      },
+      "description": "Toggle element selection mode"
+    },
+    "undo-last": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U",
+        "mac": "Command+Shift+U"
+      },
+      "description": "Undo last hidden element"
+    },
+    "toggle-rules": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+T",
+        "mac": "Command+Shift+T"
+      },
+      "description": "Toggle all rules on/off for current site"
+    },
+    "hide-videos": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+V",
+        "mac": "Command+Shift+V"
+      },
+      "description": "Hide all video elements"
+    },
+    "hide-audios": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+A",
+        "mac": "Command+Shift+A"
+      },
+      "description": "Hide all audio elements"
+    },
+    "hide-images": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+I",
+        "mac": "Command+Shift+I"
+      },
+      "description": "Hide all image elements"
+    },
+    "hide-buttons": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+B",
+        "mac": "Command+Shift+B"
+      },
+      "description": "Hide all button elements"
+    }
+  }
+}

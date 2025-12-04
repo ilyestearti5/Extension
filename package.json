@@ -1,0 +1,18 @@
+{
+  "name": "cleanweb-customizer",
+  "version": "1.0.0",
+  "description": "Chrome extension to hide unwanted elements on websites",
+  "scripts": {
+    "create-icons": "node create_icons.js"
+  },
+  "keywords": [
+    "chrome-extension",
+    "ad-blocker",
+    "element-hider"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}
