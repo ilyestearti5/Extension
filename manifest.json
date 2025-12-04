@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "CleanWeb Customizer",
+  "name": "NettoieWeb Personnalisé",
   "version": "1.0.0",
-  "description": "Hide unwanted elements on websites and keep pages clean across visits",
+  "description": "Masquez les éléments indésirables sur les sites web et gardez les pages propres à travers vos visites",
   "permissions": ["storage", "activeTab", "scripting", "contextMenus"],
   "host_permissions": ["<all_urls>"],
   "background": {
@@ -42,49 +42,49 @@
         "default": "Ctrl+Shift+H",
         "mac": "Command+Shift+H"
       },
-      "description": "Toggle element selection mode"
+      "description": "Activer/désactiver le mode de sélection d'éléments"
     },
     "undo-last": {
       "suggested_key": {
         "default": "Ctrl+Shift+U",
         "mac": "Command+Shift+U"
       },
-      "description": "Undo last hidden element"
+      "description": "Annuler le dernier élément masqué"
     },
     "toggle-rules": {
       "suggested_key": {
         "default": "Ctrl+Shift+T",
         "mac": "Command+Shift+T"
       },
-      "description": "Toggle all rules on/off for current site"
+      "description": "Activer/désactiver toutes les règles pour ce site"
     },
     "hide-videos": {
       "suggested_key": {
         "default": "Ctrl+Shift+V",
         "mac": "Command+Shift+V"
       },
-      "description": "Hide all video elements"
+      "description": "Masquer tous les éléments vidéo"
     },
     "hide-audios": {
       "suggested_key": {
         "default": "Ctrl+Shift+A",
         "mac": "Command+Shift+A"
       },
-      "description": "Hide all audio elements"
+      "description": "Masquer tous les éléments audio"
     },
     "hide-images": {
       "suggested_key": {
         "default": "Ctrl+Shift+I",
         "mac": "Command+Shift+I"
       },
-      "description": "Hide all image elements"
+      "description": "Masquer tous les éléments image"
     },
     "hide-buttons": {
       "suggested_key": {
         "default": "Ctrl+Shift+B",
         "mac": "Command+Shift+B"
       },
-      "description": "Hide all button elements"
+      "description": "Masquer tous les éléments bouton"
     }
   }
 }

@@ -1,171 +1,182 @@
-# CleanWeb Customizer
+# NettoieWeb Personnalisé
 
-A powerful Chrome extension that allows you to hide unwanted elements on websites and keep your browsing experience clean across visits.
+![Extension Banner](https://media1.tenor.com/m/6Ju_FlRfSGUAAAAC/tkt-smart.gif)
 
-## Features
+## 📋 Description
 
-### ✨ Core Features
+**NettoieWeb Personnalisé** est une extension Chrome puissante qui vous permet de masquer les éléments indésirables sur n'importe quel site web et de garder vos pages propres à travers toutes vos visites. Prenez le contrôle de votre expérience de navigation en éliminant les distractions, les publicités intrusives, et les éléments gênants !
 
-- **Element Selection**: Click to select and hide any element on a webpage
-- **Persistent Rules**: Hidden elements stay hidden on future visits
-- **Domain-Specific**: Rules apply only to specific domains
-- **Visual Feedback**: Hover preview with element info before selecting
+## ✨ Fonctionnalités Principales
 
-### ⌨️ Keyboard Shortcuts
+### 🎯 Mode de Sélection Interactive
 
-- **Ctrl+Shift+H** (Cmd+Shift+H on Mac) - Toggle element selection mode
-- **Ctrl+Shift+U** (Cmd+Shift+U on Mac) - Undo last hidden element
-- **Ctrl+Shift+T** (Cmd+Shift+T on Mac) - Toggle all rules on/off for current site
-- **ESC** - Cancel selection mode
+- **Sélection visuelle** : Activez le mode de sélection pour pointer et cliquer sur n'importe quel élément à masquer
+- **Surlignage en temps réel** : Les éléments sont surlignés lorsque vous passez la souris dessus
+- **Masquage permanent ou temporaire** : Choisissez si vous voulez masquer l'élément uniquement pour cette session ou de manière permanente
 
-### 🎯 Advanced Features
+### ⌨️ Raccourcis Clavier Pratiques
 
-- **Multi-Select Mode**: Hold Ctrl and click to select multiple elements, then press Enter to hide them all
-- **Context Menu**: Right-click anywhere → "Hide this element"
-- **Undo Support**: Undo last hidden element with one click
-- **Temporary Preview**: Show all hidden elements temporarily (5 seconds)
-- **Badge Counter**: Shows number of hidden elements for current site
-- **Search & Filter**: Search through all rules in the options page
-- **Element Preview**: See element info (tag, size, matches count) before hiding
-- **Smart Notifications**: Visual feedback when hiding/showing elements
-- **Export/Import**: Backup and restore your rules across devices or browsers
+- **Ctrl+Shift+H** (Cmd+Shift+H sur Mac) : Activer/désactiver le mode de sélection
+- **Ctrl+Shift+U** (Cmd+Shift+U sur Mac) : Annuler le dernier élément masqué
+- **Ctrl+Shift+R** (Cmd+Shift+R sur Mac) : Activer/désactiver toutes les règles
+- **Raccourcis rapides** pour masquer instantanément :
+  - Vidéos
+  - Audios
+  - Images
+  - Boutons
 
-### 📋 Common Templates (Coming Soon)
+### 🖱️ Menu Contextuel (Clic Droit)
 
-Pre-built rules for:
+- **Masquer cet élément** : Masquage temporaire pour la session en cours
+- **Masquer cet élément définitivement** : Masquage permanent sur ce site
+- **Annuler le dernier élément masqué** : Restaurer le dernier élément caché
+- **Afficher tous les éléments masqués** : Révéler temporairement tous les éléments cachés
 
-- Cookie banners
-- Newsletter popups
-- Social media widgets
-- Autoplay videos
-- Comments sections
-- Chat widgets
-- Notification bars
+### 📦 Modèles Prédéfinis
 
-## Installation
+Masquez rapidement les éléments courants avec nos modèles intégrés :
 
-### From Source
+- 🍪 **Bannières de cookies** : Éliminez les popups de consentement aux cookies
+- 📧 **Popups de newsletter** : Masquez les invitations à l'inscription
+- 📱 **Widgets de réseaux sociaux** : Cachez les boutons de partage et de suivi
+- 🎬 **Vidéos en lecture automatique** : Bloquez les vidéos qui se lancent automatiquement
+- 💬 **Sections de commentaires** : Masquez les zones de commentaires
+- 💭 **Widgets de chat** : Éliminez les bulles de chat en direct
+- 🔔 **Barres de notification** : Supprimez les bannières promotionnelles
+- 📢 **Publicités dans la barre latérale** : Masquez les annonces latérales
+- 🚨 **Alertes promotionnelles** : Bloquez les popups de vente et promotions
+- 🎥 **Lecteurs vidéo intégrés** : Cachez les lecteurs vidéo embarqués
 
-1. Clone or download this repository
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" in the top right corner
-4. Click "Load unpacked"
-5. Select the extension folder
+### 🎨 Interface Popup Intuitive
 
-## Usage
+- **Compteur d'éléments masqués** : Visualisez le nombre d'éléments cachés sur le site actuel
+- **Liste des règles actives** : Gérez toutes vos règles de masquage par domaine
+- **Suppression individuelle** : Retirez des règles spécifiques d'un simple clic
+- **Badge d'extension** : Affiche le nombre d'éléments masqués sur chaque site
 
-### Hiding Elements
+### ⚙️ Page d'Options Complète
 
-**Single Element:**
+- **Gestion globale** : Vue d'ensemble de tous les domaines et règles configurés
+- **Statistiques détaillées** : Nombre total de domaines et de règles actives
+- **Recherche de domaines** : Trouvez rapidement les sites configurés
+- **Import/Export** : Sauvegardez et restaurez vos configurations
+- **Réinitialisation** : Supprimez toutes les règles en un clic
 
-1. Click the extension icon in your browser toolbar
-2. Click "Start Selection" button (or press Ctrl+Shift+H)
-3. Hover over elements on the page (they will be highlighted in red)
-4. Click on the element you want to hide
-5. The element will be hidden immediately and on future visits
+### 🔄 Gestion Intelligente du Stockage
 
-**Multiple Elements:**
+- **Synchronisation cloud** : Vos règles sont synchronisées entre tous vos appareils Chrome
+- **Par domaine** : Les règles sont organisées et appliquées par site web
+- **Persistance** : Les éléments masqués restent cachés à chaque visite
+- **Historique d'annulation** : Revenez en arrière sur vos actions récentes
 
-1. Start selection mode as above
-2. Hold **Ctrl** (or Cmd on Mac) while clicking elements
-3. Selected elements will turn **green** and a counter will appear
-4. Press **Enter** to hide all selected elements
-5. Press **ESC** to cancel
+### 📊 Fonctionnalités Avancées
 
-### Export/Import Rules
+- **Sélecteurs CSS personnalisés** : Utilise des sélecteurs CSS puissants pour cibler précisément les éléments
+- **Application automatique** : Les règles s'appliquent automatiquement au chargement de la page
+- **Mode temporaire** : Masquez des éléments juste pour la session en cours
+- **Notifications élégantes** : Interface moderne avec des notifications fluides et animées
+- **Support des iframes** : Fonctionne même dans les cadres intégrés
+- **Compatibilité universelle** : Fonctionne sur tous les sites web
 
-**Export (Backup your rules):**
+## 🚀 Installation
 
-- Click the extension icon → Click "📥 Export" button
-- Or go to Options page → Click "Export Rules"
-- A JSON file will be downloaded with timestamp (e.g., `cleanweb-rules-2025-12-04T10-30-00.json`)
+1. Téléchargez ou clonez ce dépôt
+2. Ouvrez Chrome et accédez à `chrome://extensions/`
+3. Activez le **Mode développeur** en haut à droite
+4. Cliquez sur **Charger l'extension non empaquetée**
+5. Sélectionnez le dossier de l'extension
+6. L'extension est maintenant installée et prête à l'emploi !
 
-**Import (Restore rules):**
+## 📖 Utilisation
 
-- Click the extension icon → Click "📂 Import" button
-- Or go to Options page → Click "Import Rules"
-- Select your previously exported JSON file
-- Rules will be merged with existing rules (duplicates are automatically removed)
-- You'll see a notification showing how many rules were imported
+### Méthode 1 : Mode Sélection Visuelle
 
-### Managing Rules
+1. Cliquez sur l'icône de l'extension dans la barre d'outils
+2. Cliquez sur le bouton **"Start Selection Mode"**
+3. Survolez les éléments sur la page - ils seront surlignés
+4. Cliquez sur l'élément que vous souhaitez masquer
+5. Choisissez **Temporaire** ou **Permanent**
 
-#### Popup (Quick Access)
+### Méthode 2 : Menu Contextuel
 
-- View current domain and number of hidden elements
-- See all rules for the current site
-- Remove individual rules
-- Clear all rules for current domain
+1. Faites un clic droit n'importe où sur une page web
+2. Sélectionnez **"Hide this element"** ou **"Hide this element permanently"**
+3. Cliquez sur l'élément à masquer
+4. L'élément disparaît instantanément
 
-#### Options Page (Full Management)
+### Méthode 3 : Modèles Prédéfinis
 
-- View all rules across all domains
-- See statistics (total domains and rules)
-- **Export rules**: Download all rules as JSON file for backup
-- **Import rules**: Upload and merge rules from JSON file
-- Search and filter rules by domain or selector
-- Clear rules by domain or clear everything
+1. Ouvrez le popup de l'extension
+2. Faites défiler jusqu'à la section **"Quick Templates"**
+3. Cliquez sur un modèle (ex: "Cookie Banners")
+4. Les éléments correspondants sont masqués automatiquement
 
-## File Structure
+### Méthode 4 : Raccourcis Clavier
+
+1. Appuyez sur **Ctrl+Shift+H** pour activer le mode sélection
+2. Cliquez sur un élément pour le masquer
+3. Appuyez sur **Ctrl+Shift+U** pour annuler
+
+## 🎯 Cas d'Usage
+
+- **Lecture concentrée** : Masquez les barres latérales, commentaires et distractions pour lire des articles
+- **Productivité** : Éliminez les éléments qui détournent votre attention sur vos sites de travail
+- **Confidentialité** : Cachez les widgets de suivi et de partage social
+- **Expérience propre** : Créez votre version personnalisée et épurée de n'importe quel site
+- **Accessibilité** : Simplifiez les pages web complexes pour une meilleure lisibilité
+
+## 🛠️ Technologies Utilisées
+
+- **Manifest V3** : Dernière version du système d'extensions Chrome
+- **JavaScript Vanilla** : Pas de dépendances lourdes, code optimisé
+- **Chrome Storage API** : Synchronisation cloud automatique
+- **CSS3** : Animations fluides et interface moderne
+- **Content Scripts** : Injection de code dans les pages web
+- **Service Worker** : Gestion des événements en arrière-plan
+
+## 📁 Structure du Projet
 
 ```
 Extension/
-├── manifest.json           # Extension configuration (V3)
-├── background.js          # Service worker for background tasks
-├── contentScript.js       # Main content script injected on pages
-├── selectionOverlay.js    # Element selection interface
-├── storage.js            # Storage management utilities
-├── popup.html            # Extension popup interface
-├── popup.js              # Popup logic
-├── popup.css             # Popup and options styling
-├── options.html          # Full management page
-├── options.js            # Options page logic
-├── overlay.css           # Selection overlay styles
-└── README.md             # This file
+├── manifest.json          # Configuration de l'extension
+├── background.js          # Service worker (gestion des événements)
+├── contentScript.js       # Script injecté dans les pages web
+├── popup.html/js/css      # Interface popup de l'extension
+├── options.html/js        # Page d'options et de configuration
+├── storage.js             # Gestion du stockage des données
+├── templates.js           # Modèles prédéfinis d'éléments à masquer
+├── selectionOverlay.js    # Overlay de sélection interactive
+├── overlay.css            # Styles pour le mode sélection
+└── icons/                 # Icônes de l'extension
 ```
 
-## Technical Details
+## 🔐 Permissions
 
-- **Manifest Version**: V3 (latest Chrome extension standard)
-- **Storage**: Chrome Sync Storage (syncs across devices)
-- **Permissions**:
-  - `storage` - Save hidden element rules
-  - `activeTab` - Access current tab
-  - `scripting` - Inject content scripts
-  - `<all_urls>` - Work on all websites
+L'extension nécessite les permissions suivantes :
 
-## CSS Selector Generation
+- **storage** : Pour sauvegarder vos règles de masquage
+- **activeTab** : Pour interagir avec l'onglet actif
+- **scripting** : Pour injecter du code dans les pages web
+- **contextMenus** : Pour ajouter des options au menu contextuel
+- **host_permissions** : Pour fonctionner sur tous les sites web
 
-The extension generates CSS selectors in the following priority:
+## 🆘 Support et Contribution
 
-1. `#id` - If element has an ID
-2. `.class1.class2` - If element has classes
-3. `parent > tag:nth-child(n)` - Fallback with parent context
+Si vous rencontrez des problèmes ou avez des suggestions d'amélioration, n'hésitez pas à ouvrir une issue ou à proposer une pull request !
 
-## Limitations
+## 📜 Licence
 
-- Some websites with strict Content Security Policy (CSP) may limit functionality
-- Dynamic content may require re-selection if structure changes significantly
-- Maximum storage: Chrome Sync Storage limits (100KB per item, 102,400 bytes total)
+MIT License - Vous êtes libre d'utiliser, modifier et distribuer cette extension.
 
-## Privacy
+## 🌟 Fonctionnalités à Venir
 
-- All data is stored locally in your browser
-- No data is sent to external servers
-- Rules sync only through your Chrome account (if sync is enabled)
+- [ ] Support du mode sombre
+- [ ] Exportation de règles par site
+- [ ] Partage de configurations entre utilisateurs
+- [ ] Prévisualisation avant masquage
+- [ ] Planification temporelle du masquage
+- [ ] Statistiques d'utilisation détaillées
 
-## Support
+---
 
-For issues or feature requests, please visit the project repository.
-
-## License
-
-MIT License - Feel free to modify and distribute
-
-## Version History
-
-- **1.0.0** - Initial release
-  - Element selection and hiding
-  - Domain-specific rules
-  - Management interface
-  - Export/Import functionality
+**Profitez d'une navigation web plus propre et plus agréable ! 🎉**

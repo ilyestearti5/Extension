@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CleanWeb Customizer - Settings</title>
+    <title>NettoieWeb Personnalisé - Paramètres</title>
     <link rel="stylesheet" href="popup.css" />
     <style>
       body {
@@ -175,18 +175,18 @@
   <body>
     <div class="options-container">
       <div class="header">
-        <h1>🧹 CleanWeb Customizer Settings</h1>
-        <p>Manage all your hidden elements across websites</p>
+        <h1>🧹 NettoieWeb Personnalisé - Paramètres</h1>
+        <p>Gérez tous vos éléments masqués à travers les sites web</p>
       </div>
 
       <div class="stats-bar">
         <div class="stat-item">
           <span class="stat-value" id="totalDomains">0</span>
-          <span class="stat-label">Websites</span>
+          <span class="stat-label">Sites web</span>
         </div>
         <div class="stat-item">
           <span class="stat-value" id="totalRules">0</span>
-          <span class="stat-label">Hidden Elements</span>
+          <span class="stat-label">Éléments masqués</span>
         </div>
       </div>
 
@@ -194,7 +194,7 @@
         <input
           type="text"
           id="searchInput"
-          placeholder="Search domains or selectors..."
+          placeholder="Rechercher des domaines ou sélecteurs..."
           style="
             flex: 1;
             padding: 10px;
@@ -203,23 +203,30 @@
             font-size: 14px;
           "
         />
-        <button id="exportBtn" class="btn btn-secondary">Export Rules</button>
-        <button id="importBtn" class="btn btn-secondary">Import Rules</button>
+        <button id="exportBtn" class="btn btn-secondary">
+          Exporter les règles
+        </button>
+        <button id="importBtn" class="btn btn-secondary">
+          Importer les règles
+        </button>
         <input
           type="file"
           id="importFile"
           accept=".json"
           style="display: none"
         />
-        <button id="clearAllBtn" class="btn btn-danger">Clear All Rules</button>
+        <button id="clearAllBtn" class="btn btn-danger">
+          Effacer toutes les règles
+        </button>
       </div>
       <div class="domain-section">
-        <h2>Rules by Domain</h2>
+        <h2>Règles par domaine</h2>
         <div id="domainsList">
           <div class="empty-state-large">
-            <p>No rules configured yet</p>
+            <p>Aucune règle configurée pour le moment</p>
             <p style="font-size: 14px; margin-top: 10px">
-              Start using the extension on any website to create rules
+              Commencez à utiliser l'extension sur n'importe quel site pour
+              créer des règles
             </p>
           </div>
         </div>

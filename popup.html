@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CleanWeb Customizer</title>
+    <title>NettoieWeb Personnalisé</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -22,17 +22,21 @@
         <div class="header-icon">
           <span class="material-icons">cleaning_services</span>
         </div>
-        <h1>CleanWeb Customizer</h1>
-        <p class="subtitle">Hide unwanted elements on any website</p>
+        <h1>NettoieWeb Personnalisé</h1>
+        <p class="subtitle">
+          Masquez les éléments indésirables sur n'importe quel site
+        </p>
       </header>
 
       <main>
         <section class="action-section">
           <button id="toggleSelectionBtn" class="btn btn-primary">
             <span class="material-icons">ads_click</span>
-            <span id="btnText">Start Selection</span>
+            <span id="btnText">Commencer la sélection</span>
           </button>
-          <p class="help-text">Click to start selecting elements to hide</p>
+          <p class="help-text">
+            Cliquez pour commencer à sélectionner les éléments à masquer
+          </p>
           <p class="help-text-small">
             <span class="material-icons">keyboard</span> Ctrl+Shift+H
           </p>
@@ -52,7 +56,7 @@
             <div class="info-item">
               <span class="material-icons info-icon">visibility_off</span>
               <div class="info-content">
-                <span class="label">Hidden</span>
+                <span class="label">Masqués</span>
                 <span id="hiddenCount" class="value">0</span>
               </div>
             </div>
@@ -61,9 +65,9 @@
             <div class="info-item">
               <span class="material-icons info-icon">check_circle</span>
               <div class="info-content">
-                <span class="label">Status</span>
+                <span class="label">Statut</span>
                 <span id="statusIndicator" class="value status-active"
-                  >Active</span
+                  >Actif</span
                 >
               </div>
             </div>
@@ -74,47 +78,47 @@
           <button
             id="undoBtn"
             class="btn btn-action"
-            title="Undo last hidden element (Ctrl+Shift+U)"
+            title="Annuler le dernier élément masqué (Ctrl+Shift+U)"
           >
             <span class="material-icons">undo</span>
-            <span>Undo</span>
+            <span>Annuler</span>
           </button>
           <button
             id="showHiddenBtn"
             class="btn btn-action"
-            title="Temporarily show all hidden elements"
+            title="Afficher temporairement tous les éléments masqués"
           >
             <span class="material-icons">visibility</span>
-            <span>Show</span>
+            <span>Afficher</span>
           </button>
           <button
             id="toggleRulesBtn"
             class="btn btn-action"
-            title="Toggle rules on/off (Ctrl+Shift+T)"
+            title="Activer/désactiver les règles (Ctrl+Shift+T)"
           >
             <span class="material-icons">toggle_off</span>
-            <span>Toggle</span>
+            <span>Basculer</span>
           </button>
         </section>
 
         <section class="tag-hiding-section">
           <h3>
             <span class="material-icons section-icon">label</span>
-            Quick Hide by Tag
+            Masquage rapide par balise
           </h3>
           <div class="tag-buttons">
             <button
               id="hideVideosBtn"
               class="btn btn-tag"
-              title="Hide all video elements (Ctrl+Shift+V)"
+              title="Masquer tous les éléments vidéo (Ctrl+Shift+V)"
             >
               <span class="material-icons">videocam</span>
-              <span>Videos</span>
+              <span>Vidéos</span>
             </button>
             <button
               id="hideAudiosBtn"
               class="btn btn-tag"
-              title="Hide all audio elements (Ctrl+Shift+A)"
+              title="Masquer tous les éléments audio (Ctrl+Shift+A)"
             >
               <span class="material-icons">volume_up</span>
               <span>Audios</span>
@@ -122,7 +126,7 @@
             <button
               id="hideImagesBtn"
               class="btn btn-tag"
-              title="Hide all img elements (Ctrl+Shift+I)"
+              title="Masquer tous les éléments img (Ctrl+Shift+I)"
             >
               <span class="material-icons">image</span>
               <span>Images</span>
@@ -130,7 +134,7 @@
             <button
               id="hideIframesBtn"
               class="btn btn-tag"
-              title="Hide all iframe elements"
+              title="Masquer tous les éléments iframe"
             >
               <span class="material-icons">web_asset</span>
               <span>Iframes</span>
@@ -138,26 +142,26 @@
             <button
               id="hideNavsBtn"
               class="btn btn-tag"
-              title="Hide all nav elements"
+              title="Masquer tous les éléments nav"
             >
               <span class="material-icons">menu</span>
-              <span>Navs</span>
+              <span>Navigations</span>
             </button>
             <button
               id="hideButtonsBtn"
               class="btn btn-tag"
-              title="Hide all button elements (Ctrl+Shift+B)"
+              title="Masquer tous les éléments bouton (Ctrl+Shift+B)"
             >
               <span class="material-icons">smart_button</span>
-              <span>Buttons</span>
+              <span>Boutons</span>
             </button>
             <button
               id="hideLinksBtn"
               class="btn btn-tag"
-              title="Hide all anchor/link elements"
+              title="Masquer tous les éléments anchor/lien"
             >
               <span class="material-icons">link</span>
-              <span>Links</span>
+              <span>Liens</span>
             </button>
           </div>
           <div class="custom-tag-input">
@@ -165,7 +169,7 @@
             <input
               type="text"
               id="customTagInput"
-              placeholder="e.g., aside, footer, section"
+              placeholder="ex: aside, footer, section"
             />
             <button id="hideCustomTagBtn" class="btn btn-custom-tag">
               <span class="material-icons">add</span>
@@ -176,12 +180,12 @@
         <section class="rules-section">
           <h3>
             <span class="material-icons section-icon">rule</span>
-            Active Rules
+            Règles actives
           </h3>
           <div id="rulesList" class="rules-list">
             <p class="empty-state">
               <span class="material-icons">info</span>
-              No hidden elements yet
+              Aucun élément masqué pour le moment
             </p>
           </div>
         </section>
@@ -189,27 +193,27 @@
         <section class="actions-footer">
           <button id="clearDomainBtn" class="btn btn-footer btn-danger">
             <span class="material-icons">delete_sweep</span>
-            <span>Clear Site</span>
+            <span>Effacer le site</span>
           </button>
           <div class="footer-actions-right">
             <button
               id="exportBtn"
               class="btn btn-footer"
-              title="Export all rules to file"
+              title="Exporter toutes les règles vers un fichier"
             >
               <span class="material-icons">file_download</span>
             </button>
             <button
               id="importBtn"
               class="btn btn-footer"
-              title="Import rules from file"
+              title="Importer les règles depuis un fichier"
             >
               <span class="material-icons">file_upload</span>
             </button>
             <button
               id="openOptionsBtn"
               class="btn btn-footer"
-              title="Open options"
+              title="Ouvrir les options"
             >
               <span class="material-icons">settings</span>
             </button>

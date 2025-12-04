@@ -1,19 +1,19 @@
-// Popup script for CleanWeb Customizer
+// Script popup pour NettoieWeb Personnalisé
 
 let currentDomain = "";
 let selectionActive = false;
 
-// Initialize popup
+// Initialiser le popup
 async function initPopup() {
   try {
-    // Get current tab
+    // Obtenir l'onglet actuel
     const [tab] = await chrome.tabs.query({
       active: true,
       currentWindow: true,
     });
 
     if (!tab || !tab.url) {
-      showError("Cannot access this page");
+      showError("Impossible d'accéder à cette page");
       return;
     }
 
@@ -23,16 +23,16 @@ async function initPopup() {
     // Update UI
     document.getElementById("currentDomain").textContent = currentDomain;
 
-    // Load rules for this domain
+    // Charger les règles pour ce domaine
     loadRules();
 
-    // Check if selection mode is active
+    // Vérifier si le mode sélection est actif
     chrome.tabs.sendMessage(
       tab.id,
       { action: "getSelectionStatus" },
       (response) => {
         if (chrome.runtime.lastError) {
-          console.log("Content script not ready");
+          console.log("Script de contenu pas prêt");
           return;
         }
         if (response && response.active) {
@@ -42,8 +42,8 @@ async function initPopup() {
       }
     );
   } catch (e) {
-    console.error("Error initializing popup:", e);
-    showError("Error loading extension");
+    console.error("Erreur lors de l'initialisation du popup:", e);
+    showError("Erreur lors du chargement de l'extension");
   }
 }
 
@@ -106,7 +106,7 @@ async function toggleSelection() {
       { action: "toggleSelection" },
       (response) => {
         if (chrome.runtime.lastError) {
-          showError("Cannot activate on this page");
+          showError("Impossible d'activer sur cette page");
           return;
         }
 
@@ -114,31 +114,31 @@ async function toggleSelection() {
         updateSelectionButton();
 
         if (selectionActive) {
-          window.close(); // Close popup when selection starts
+          window.close(); // Fermer le popup quand la sélection commence
         }
       }
     );
   } catch (e) {
-    console.error("Error toggling selection:", e);
-    showError("Error starting selection");
+    console.error("Erreur lors du basculement de sélection:", e);
+    showError("Erreur lors du démarrage de la sélection");
   }
 }
 
-// Update selection button state
+// Mettre à jour l'état du bouton de sélection
 function updateSelectionButton() {
   const btn = document.getElementById("toggleSelectionBtn");
   const btnText = document.getElementById("btnText");
 
   if (selectionActive) {
     btn.classList.add("active");
-    btnText.textContent = "Selection Active";
+    btnText.textContent = "Sélection active";
   } else {
     btn.classList.remove("active");
-    btnText.textContent = "Start Selection";
+    btnText.textContent = "Commencer la sélection";
   }
 }
 
-// Remove a specific rule
+// Supprimer une règle spécifique
 async function removeRule(selector) {
   try {
     const result = await chrome.storage.sync.get([currentDomain]);
@@ -147,51 +147,51 @@ async function removeRule(selector) {
 
     await chrome.storage.sync.set({ [currentDomain]: rules });
 
-    // Reload the page to show changes
+    // Recharger la page pour afficher les changements
     const [tab] = await chrome.tabs.query({
       active: true,
       currentWindow: true,
     });
     chrome.tabs.reload(tab.id);
 
-    // Refresh rules list
+    // Actualiser la liste des règles
     loadRules();
   } catch (e) {
-    console.error("Error removing rule:", e);
-    showError("Error removing rule");
+    console.error("Erreur lors de la suppression de règle:", e);
+    showError("Erreur lors de la suppression de règle");
   }
 }
 
-// Clear all rules for current domain
+// Effacer toutes les règles pour le domaine actuel
 async function clearDomain() {
-  if (!confirm(`Clear all hidden elements for ${currentDomain}?`)) {
+  if (!confirm(`Effacer tous les éléments masqués pour ${currentDomain} ?"`)) {
     return;
   }
 
   try {
     await chrome.storage.sync.remove([currentDomain]);
 
-    // Reload the page
+    // Recharger la page
     const [tab] = await chrome.tabs.query({
       active: true,
       currentWindow: true,
     });
     chrome.tabs.reload(tab.id);
 
-    // Refresh rules list
+    // Actualiser la liste des règles
     loadRules();
   } catch (e) {
-    console.error("Error clearing domain:", e);
-    showError("Error clearing rules");
+    console.error("Erreur lors de l'effacement du domaine:", e);
+    showError("Erreur lors de l'effacement des règles");
   }
 }
 
-// Open options page
+// Ouvrir la page des options
 function openOptions() {
   chrome.runtime.openOptionsPage();
 }
 
-// Show error message
+// Afficher un message d'erreur
 function showError(message) {
   const container = document.querySelector(".container");
   const errorDiv = document.createElement("div");

@@ -1,5 +1,5 @@
-// Content script for CleanWeb Customizer
-// This runs on every page and applies hidden element rules
+// Script de contenu pour NettoieWeb Personnalisé
+// S'exécute sur chaque page et applique les règles d'éléments masqués
 
 (function () {
   "use strict";
@@ -7,10 +7,10 @@
   let selectionMode = false;
   let overlayActive = false;
   let rulesEnabled = true;
-  let hiddenHistory = []; // Track hidden elements for undo
-  let temporaryHidden = []; // Track temporarily hidden elements
+  let hiddenHistory = []; // Suivre les éléments masqués pour annuler
+  let temporaryHidden = []; // Suivre les éléments temporairement masqués
 
-  // Show notification
+  // Afficher une notification
   function showNotification(message, type = "success") {
     const notification = document.createElement("div");
     notification.className = `cleanweb-notification cleanweb-notification-${type}`;
@@ -90,7 +90,7 @@
     }, 3000);
   }
 
-  // Apply hidden elements when page loads
+  // Appliquer les éléments masqués au chargement de la page
   async function applyHiddenElements() {
     if (!rulesEnabled) return;
 
